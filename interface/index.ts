@@ -7,6 +7,9 @@ import { ColorsT } from "./utils.interface";
 import { SelectI } from "./components.interface";
 import { LanguageI } from "./data.interface";
 import { DrawerNavI } from "./components.interface";
+import { MapButtonI } from "./components.interface";
+import { CourseI } from "./data.interface";
+import { SocialNetworkI } from "./data.interface";
 
 export type {
   LayoutI,
@@ -18,4 +21,7 @@ export type {
   SelectI,
   LanguageI,
   DrawerNavI,
+  MapButtonI,
+  CourseI,
+  SocialNetworkI,
 };

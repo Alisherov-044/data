@@ -3,8 +3,12 @@ import styled from "styled-components";
 import { colors } from "@/utils";
 import { ButtonI } from "@/interface";
 
-export function Button({ children, variant = "primary" }: ButtonI) {
-  return <StyledButton className={variant}>{children}</StyledButton>;
+export function Button({ children, variant = "primary", ...rest }: ButtonI) {
+  return (
+    <StyledButton className={variant} {...rest}>
+      {children}
+    </StyledButton>
+  );
 }
 
 const StyledButton = styled.button`

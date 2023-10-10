@@ -1,3 +1,4 @@
+"use client";
 import { ContainerI } from "@/interface";
 
 export function Container({ children }: ContainerI) {

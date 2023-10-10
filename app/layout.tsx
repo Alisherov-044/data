@@ -3,7 +3,8 @@ import localFont from "next/font/local";
 import type { Metadata } from "next";
 import { LayoutI } from "@/interface";
 import { Header } from "@/components";
-import { CacheProvider } from "@/providers";
+import { Footer } from "@/components";
+import { EmotionCacheProvider } from "@/providers";
 
 const customFont = localFont({
   src: [
@@ -38,12 +39,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutI) {
   return (
     <html lang="en">
-      <body className={customFont.className}>
-        <CacheProvider>
+      <EmotionCacheProvider>
+        <body className={customFont.className}>
           <Header />
           {children}
-        </CacheProvider>
-      </body>
+          <Footer />
+        </body>
+      </EmotionCacheProvider>
     </html>
   );
 }

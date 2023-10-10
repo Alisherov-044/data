@@ -1,3 +1,3 @@
-import { CacheProvider } from "./CacheProvider";
+import { EmotionCacheProvider } from "./EmotionCacheProvider";
 
-export { CacheProvider };
+export { EmotionCacheProvider };

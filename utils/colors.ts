@@ -21,7 +21,7 @@ export const colors: ColorsT = {
   black_12: "#C6C5C5",
   // neotural
   neo: "#F2F3F7",
-  neo_2: "F9F9FB",
+  neo_2: "#F9F9FB",
   white: "#FFFFFF",
   // green
   green_1: "#7BD309",

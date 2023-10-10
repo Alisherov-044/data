@@ -1,4 +1,4 @@
-import { createEmotionCache } from "./createEmotionCache";
 import { colors } from "./colors";
+import { createEmotionCache } from "./createEmotionCache";
 
-export { createEmotionCache, colors };
+export { colors, createEmotionCache };

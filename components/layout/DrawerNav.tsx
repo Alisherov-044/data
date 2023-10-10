@@ -1,13 +1,13 @@
 "use client";
 import Link from "next/link";
 import styled from "styled-components";
-import { Button, Select } from "..";
+import { Button, MapButton, Select } from "..";
 import { colors } from "@/utils";
 import { usePath } from "@/hooks";
 import { Drawer } from "@mui/material";
 import { DrawerNavI } from "@/interface";
 import { languages, navLinks } from "@/data";
-import { CloseIcon, MapIcon, PhoneIcon, PlayIcon } from "@/assets";
+import { CloseIcon, PhoneIcon, PlayIcon } from "@/assets";
 
 export function DrawerNav({ isOpen, close }: DrawerNavI) {
   const { checkPath } = usePath();
@@ -50,11 +50,7 @@ export function DrawerNav({ isOpen, close }: DrawerNavI) {
                 {"+998-(62)-227-72-22"}
               </Button>
             </PhoneButton>
-            <MapButton>
-              <MapIcon />
-              {"Manzil"}
-              <MapTypoBtn className="typo-btn">{"xarita"}</MapTypoBtn>
-            </MapButton>
+            <MapButton />
           </Contact>
         </Content>
       </Wrapper>
@@ -152,56 +148,4 @@ const Contact = styled.div`
 
 const PhoneButton = styled.div`
   width: fit-content;
-`;
-
-const MapButton = styled.button`
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: fit-content;
-  padding: 8px 16px;
-  border-radius: 100px;
-  border: 1px solid ${colors.black_100};
-  cursor: pointer;
-
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.57;
-  color: ${colors.black_100};
-  transition: all 0.3s ease;
-
-  svg path {
-    fill: ${colors.black_75};
-    transition: fill 0.3s ease;
-  }
-
-  .typo-btn {
-    transition: all 0.3s ease;
-  }
-
-  &:hover {
-    color: ${colors.primary_100};
-    border-color: ${colors.primary_100};
-
-    svg path {
-      fill: ${colors.primary_100};
-    }
-
-    .typo-btn {
-      color: ${colors.white};
-      background-color: ${colors.primary_100};
-    }
-  }
-`;
-
-const MapTypoBtn = styled.button`
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.57;
-  padding: 7px 14px;
-  border-radius: 8px;
-  color: ${colors.black_50};
-  background-color: ${colors.neo_2};
-  transition: all 0.3 ease;
-  cursor: pointer;
 `;

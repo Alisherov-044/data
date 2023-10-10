@@ -20,3 +20,7 @@ export interface DrawerNavI {
   isOpen: boolean;
   close: () => void;
 }
+
+export interface MapButtonI extends ComponentProps<"button"> {
+  variant?: "primary" | "secondary";
+}
